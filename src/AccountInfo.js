@@ -1,3 +1,4 @@
+
 import React,{useState,useEffect} from "react"
 import  TransactionForm from "./TransactionForm"
 import TransactionTableList from "./TransactionTableList"
@@ -6,7 +7,7 @@ function TransactionInfo(){
   const [transactions,setTransactions]=useState([])
   const [search,setSearch]=useState("")
    useEffect(() => {
-    fetch("http://localhost:8001/transactions")
+    fetch(" http://localhost:3000/transactions")
       .then((res) => res.json())
       .then((data) => setTransactions(data));
   }, []);
@@ -15,7 +16,7 @@ function TransactionInfo(){
     newTransaction = {...newTransaction,id}
     event.preventDefault()
     event.target.reset();
-    fetch("http://localhost:8001/transactions",{
+    fetch(" http://localhost:3000/transactions",{
       method:"POST",
       headers:{
         "Content-Type":"application/json"
@@ -38,9 +39,10 @@ function TransactionInfo(){
 
   return(
     <div className="info" >
+<SearchBar search={search} searchHandler={searchHandler} />
 <TransactionTableList transactions={filteredTransactions}/>
 <TransactionForm addTransaction={addTransaction}/>
- <SearchBar search={search} searchHandler={searchHandler} />
+ 
     </div>
   )
 }

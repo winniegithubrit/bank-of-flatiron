@@ -34,9 +34,10 @@ function TransactionTableList({transactions}){
 export default TransactionTableList*/
 import TransactionTable from "./TransactionTable"
 
+import './index.css';
 function TransactionTableList({ transactions }) {
   return (
-    <div className="list">
+    
       <table>
         <tbody>
           <tr>
@@ -70,7 +71,7 @@ function TransactionTableList({ transactions }) {
           )}
         </tbody>
       </table>
-    </div>
+    
   );
 }
 
