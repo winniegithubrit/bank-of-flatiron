@@ -4,7 +4,7 @@ import  TransactionForm from "./TransactionForm"
 import TransactionTableList from "./TransactionTableList"
 import SearchBar from "./SearchBar"
 //the state variables for the Transaction info function
-function TransactionInfo(){
+function AccountInfo(){
   const [transactions,setTransactions]=useState([])
   const [search,setSearch]=useState("")
    useEffect(() => {
@@ -49,4 +49,4 @@ function TransactionInfo(){
     </div>
   )
 }
-export default TransactionInfo
+export default AccountInfo
