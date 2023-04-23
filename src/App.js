@@ -1,6 +1,6 @@
 import React from "react"
 import AccountInfo from "./AccountInfo"
-//import './App.css'
+//the function app
 function App(){
   return(
     <div>
@@ -9,4 +9,5 @@ function App(){
     </div>
   )
 }
+//exporting the app component
 export default App

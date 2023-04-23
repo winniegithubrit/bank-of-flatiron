@@ -1,9 +1,14 @@
+//importing the transcationTable
 import TransactionTable from "./TransactionTable"
 
 import './index.css';
+//created a transactionTableList function returns
+// a table containing a header row and a body that shows transaction information.
 function TransactionTableList({ transactions }) {
   return (
-    
+    //the table with the various rows and body
+    //If transactions is not empty, the code maps over the transactions array and generates
+    // a TransactionTable component for each transaction, passing the transaction's properties as props and using the id as the key.
       <table>
         <tbody>
           <tr>
@@ -20,6 +25,7 @@ function TransactionTableList({ transactions }) {
               <h2>Amount</h2>
             </th>
           </tr>
+          
           {transactions && transactions.length > 0 ? (
             transactions.map((transaction) => (
               <TransactionTable

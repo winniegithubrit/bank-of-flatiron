@@ -1,19 +1,20 @@
-
+//import react and usestate from react
 import React, { useState } from "react";
-
+//defining a react component called TransactionForm
 function TransactionForm({ addTransaction }) {
+  //trying to use the useState to store the data for the form
   const [formData, setFormData] = useState({
     date: "",
     description: "",
     category: "",
     amount: "",
   });
-
+//this is a function that will handle the submission of the form
   function handleSubmit(event) {
     event.preventDefault();
     
   }
-
+//this function will enable us to add a transaction in the form
   function handleAddTransaction() {
     addTransaction(formData);
     setFormData({
@@ -23,7 +24,7 @@ function TransactionForm({ addTransaction }) {
       amount: "",
     });
   }
-
+//the form with input fields and the submit button
   return (
     <div className="form">
       <form onSubmit={handleSubmit}>
@@ -70,5 +71,5 @@ function TransactionForm({ addTransaction }) {
     </div>
   );
 }
-
+//exporting the transactionForm 
 export default TransactionForm;
