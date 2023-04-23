@@ -7,16 +7,15 @@ function TransactionInfo(){
   const [transactions,setTransactions]=useState([])
   const [search,setSearch]=useState("")
    useEffect(() => {
-    fetch(" http://localhost:3000/transactions")
+    fetch("http://localhost:3000/transactions")
       .then((res) => res.json())
       .then((data) => setTransactions(data));
   }, []);
-  function addTransaction(event,newTransaction){
+  function addTransaction(newTransaction){
     let id=transactions.length + 1;
     newTransaction = {...newTransaction,id}
-    event.preventDefault()
-    event.target.reset();
-    fetch(" http://localhost:3000/transactions",{
+   
+    fetch("http://localhost:3000/transactions",{
       method:"POST",
       headers:{
         "Content-Type":"application/json"

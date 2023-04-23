@@ -1,6 +1,6 @@
 import React from "react"
 import AccountInfo from "./AccountInfo"
-import './App.css'
+//import './App.css'
 function App(){
   return(
     <div>
