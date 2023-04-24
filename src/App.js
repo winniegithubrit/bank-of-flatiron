@@ -4,7 +4,7 @@ import AccountInfo from "./AccountInfo"
 function App(){
   return(
     <div>
-<h1>THE BANK OF FLATIRON</h1>
+<h1>THE BANK OF FLAT-IRON</h1>
 <AccountInfo/>
     </div>
   )

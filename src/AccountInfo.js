@@ -3,7 +3,7 @@ import React,{useState,useEffect} from "react"
 import  TransactionForm from "./TransactionForm"
 import TransactionTableList from "./TransactionTableList"
 import SearchBar from "./SearchBar"
-//the state variables for the Transaction info function
+//the state variables for the Account info function
 function AccountInfo(){
   const [transactions,setTransactions]=useState([])
   const [search,setSearch]=useState("")

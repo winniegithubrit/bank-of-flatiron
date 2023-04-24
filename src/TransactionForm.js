@@ -30,7 +30,7 @@ function TransactionForm({ addTransaction }) {
       <form onSubmit={handleSubmit}>
         <label className="date">Date</label>
         <input
-          type="text"
+          type="date"
           id="date"
           value={formData.date}
           onChange={(event) =>
@@ -57,7 +57,7 @@ function TransactionForm({ addTransaction }) {
         />
         <label className="amount">Amount</label>
         <input
-          type="text"
+          type="number"
           id="amount"
           value={formData.amount}
           onChange={(event) =>
